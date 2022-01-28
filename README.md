@@ -4,6 +4,8 @@
 <img src="public\Shopping Item MST task 2022-01-28 .png" >
 
 > Shopping Item List that allow filter and sort using Mobx state tree
+> <br/>
+> Demo Url: https://hellosivi-mst-task.netlify.app/
 
 ---
 
@@ -12,10 +14,10 @@
 You're sections headers will be used to reference location of destination.
 
 - [Description](#description)
-- [Approach](#Approach)
-- [Mobx-state-tree](#Mobx-state-tree)
-- [Technologies](#Technologies)
-- [Additional Packages](#Additional-Packages)
+- [Approach](#approach)
+- [Mobx-state-tree](#mobx-state-tree)
+- [Technologies](#technologies)
+- [Additional Packages](#additional-packages)
 - [How To Use](#how-to-use)
 - [Author Info](#author-info)
 
