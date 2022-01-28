@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+//App Component is Parent of all Components
+//App Component is used only to render two more compontents
+import RenderCard from "./Components/RenderCard";
 
+import Header from "./Layout/Header";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* Header Component renders Navbar and options to Filter and sort from Dropdowns  */}
+      <Header />
+      <RenderCard />
+    </>
   );
 }
 

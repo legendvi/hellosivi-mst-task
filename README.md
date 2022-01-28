@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Shopping Item MST Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Image]
+<img src="public\Shopping Item MST task 2022-01-28 .png" >
 
-## Available Scripts
+> Shopping Item List that allow filter and sort using Mobx state tree
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You're sections headers will be used to reference location of destination.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Description](#description)
+- [Approach](#Approach)
+- [Mobx-state-tree](#Mobx-state-tree)
+- [Technologies](#Technologies)
+- [Additional Packages](#Additional-Packages)
+- [How To Use](#how-to-use)
+- [Author Info](#author-info)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+This Project Provides a navbar on top that has three dropdowns to filter the list using "Category", "Rating", "Price" one dropdown to sort items using "Category", "Name", "Price".
+The filters are independent of one another and selecting any filter dropdown will give results only for that particular filter from mail JSON data stored.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Approach
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In this project I have used "react-bootstrap "and "material UI" to give design and resposivness.<br/>
+Mobx-state-tree is used to define app state as two arrays.<br/>
+One Array has all the items that will be rendered and another array will have a reference to first array and will be rendered in screen as cards in Grid Layout.<br/>
+Actions are defined in shopItemsModel to filter itemListRendered that will be Displayed Each action will have a value that is checked and conditionally updates itemListRendered.
+<br/>
+An Action is defined to sort elements based on value provided which let the action identify the field to sort and it sorts both the array. Both arrays are sorted so RenderCard listen and update immediately and multiple renders does not change the sorting order
+<br/>
+RenderCard component listens to changes in itemListRendered using observer from "mobx-react-lite" and renders the Items
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<a href="#">Back To The Top</a>
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Mobx-state-tree
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+"Mobx" Mobx-react-lite "mobx-state-tree" are the packages used to manage state in this project.<br/>
+<b>Mobx-state-tree</b> gives structure MobX which is a state management "engine". It supports a full set of features for a modern state management system -- all in a package with zero dependencies other than MobX itself.
+<br/>
+It has a centralized store for all data in app and lets us mutate data using actions.
+<br/>
+It has built in support for refernces so data will be normalized across app but Developers can use the data in a denormalized way.
+<br/>
+It gives Strong Schema and throws exception if the Model is not matched and helps in debugging
+<br/>
+MST works great in vanilla JS and with a lot of popular JavaScript Frameworks (e.g: React, Vue, React Native)
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<a href="#">Back To The Top</a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### Technologies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- HTML, CSS
+- Javascript
+- React
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Additional Packages
 
-### Code Splitting
+- @mui/material
+- bootstrap
+- react-bootstrap
+- mobx-react-lite
+- mobx
+- mobx-state-tree
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<a href="#">Back To The Top</a>
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## How To Use
 
-### Making a Progressive Web App
+#### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- npm install
+- npm start
 
-### Advanced Configuration
+<a href="#">Back To The Top</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Author Info
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- E-mail - dvigneshkumar3@gmail.com
+- LinkdedIn - https://www.linkedin.com/in/vignesh-kumar-d-959a44146/
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="#">Back To The Top</a>
