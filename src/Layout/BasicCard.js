@@ -24,7 +24,7 @@ export default function BasicCard({ item }) {
             <img
               src={item.imageUrl}
               alt={item.name}
-              style={{ objectFit: "contain", Width: "100%", maxHeight: "100%" }}
+              style={{ objectFit: "fill", Width: "100%", maxHeight: "100%" }}
             ></img>
             <div
               // className="ratingdiv"
@@ -67,7 +67,9 @@ export default function BasicCard({ item }) {
             <header style={{ textalign: "left" }}>{item.category}</header>
             <Typography textAlign="left" component="div" variant="body3">
               <span style={{ fontWeight: "bold" }}> Rs. {item.price} </span>
-              <strike>Rs. {item.originalPrice}</strike>
+              <strike style={{ color: "grey" }}>
+                Rs. {item.originalPrice}
+              </strike>
               <span style={{ color: "orange" }}> ({item.offer}% OFF)</span>
             </Typography>
           </div>
