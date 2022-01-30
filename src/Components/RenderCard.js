@@ -14,7 +14,7 @@ function RenderCard(props) {
       <Grid container spacing={2.4} justifyContent={"space-beween"}>
         {store.itemListRendered.map((item, index) => {
           return (
-            <Grid item md={4} sm={6} lg={3} xl={2.4} xs={12} key={index}>
+            <Grid item md={4} sm={6} lg={2.4} xl={2.4} xs={12} key={index}>
               <BasicCard item={item} index={index} />
             </Grid>
           );
