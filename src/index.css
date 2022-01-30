@@ -14,15 +14,15 @@ code {
 /* .imagediv {
   width: 432;
   height: 310;
-  position: "relative";
+  position: relative;
 }
 
 .ratingdiv {
-  position: "absolute";
+  position: absolute;
   top: 268;
   left: 10;
-  background-color: "white";
-  opacity: "0.9";
-  border-radius: "0.15em";
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 0.15em;
   padding: 4;
 } */

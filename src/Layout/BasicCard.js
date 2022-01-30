@@ -18,7 +18,7 @@ export default function BasicCard({ item }) {
       >
         <CardContent style={{ padding: 0 }}>
           <div
-            className="imagediv"
+            // className="imagediv"
             style={{ width: 432, height: 310, position: "relative" }}
           >
             <img
@@ -27,7 +27,7 @@ export default function BasicCard({ item }) {
               style={{ objectFit: "contain", Width: "100%", maxHeight: "100%" }}
             ></img>
             <div
-              id="ratingdiv"
+              // className="ratingdiv"
               style={{
                 position: "absolute",
                 top: 268,
@@ -36,16 +36,21 @@ export default function BasicCard({ item }) {
                 opacity: "0.9",
                 borderRadius: "0.15em",
                 padding: 4,
+                width: 95,
+                display: "flex",
+                justifyContent: "center",
               }}
             >
               <Typography
                 textAlign="left"
-                variant="h9"
                 component="div"
-                style={{ fontWeight: "bold" }}
+                style={{ fontWeight: "bold", fontSize: 14 }}
               >
-                {item.rating} <StarIcon style={{ color: "teal" }} />|
-                {item.totalReviews}
+                {item.rating}{" "}
+                <StarIcon
+                  style={{ color: "teal", fontSize: 18, marginBottom: 2 }}
+                />{" "}
+                | {item.totalReviews}
               </Typography>
             </div>
           </div>
