@@ -44,7 +44,8 @@ export default function BasicCard({ item }) {
                 component="div"
                 style={{ fontWeight: "bold" }}
               >
-                {item.rating} <StarIcon style={{ color: "teal" }} />| 17.8k
+                {item.rating} <StarIcon style={{ color: "teal" }} />|
+                {item.totalReviews}
               </Typography>
             </div>
           </div>
