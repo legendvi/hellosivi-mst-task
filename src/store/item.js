@@ -8,5 +8,7 @@ export default types.model("item", {
   price: types.number,
   imageUrl: types.string,
   rating: types.number,
-  stock: types.number,
+  originalPrice: types.number,
+  offer: types.number,
+  totalReviews: types.string,
 });

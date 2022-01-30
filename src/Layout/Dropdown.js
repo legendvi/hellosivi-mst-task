@@ -1,6 +1,7 @@
 // This component gives all the dropdown JSX required
 
 import { NavDropdown, Nav } from "react-bootstrap";
+import "bootstrap/dist/js/bootstrap.min.js";
 import store from "../store/app-store";
 export default function Dropdown() {
   // this returns dropdown Coomponents imported from reat-bootstrap to render in Header
@@ -12,6 +13,7 @@ export default function Dropdown() {
         navbarScroll
       >
         {/* Dropdown to filter by Category */}
+
         <NavDropdown
           onSelect={(e) => store.categoryHandler(e)}
           title="Category"
@@ -72,19 +74,29 @@ export default function Dropdown() {
       </Nav>
       <Nav>
         {/* Dropdown to sort Elements */}
-        <NavDropdown
-          onSelect={(e) => store.sortHandler(e)}
-          title="Sort By"
-          id="navbarScrollingPrice"
-        >
-          <NavDropdown.Item eventKey="NoSort">No Sort</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item eventKey="Name">Name</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item eventKey="Category">Category</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item eventKey="Price">Price</NavDropdown.Item>
-        </NavDropdown>
+
+        <div style={{ width: 230, border: "1px solid black" }}>
+          <span style={{ display: "inline-block", padding: 8 }}>
+            Sort By:
+            <select
+              aria-label="Default select example"
+              onChange={(e) => {
+                store.sortHandler(e.target.value);
+              }}
+              style={{
+                border: 0,
+                display: "inline-block",
+                outline: 0,
+                fontWeight: "bold",
+              }}
+            >
+              <option value="NoSort">Recommended</option>
+              <option value="Name">Name</option>
+              <option value="Category">Category</option>
+              <option value="Price">Price</option>
+            </select>
+          </span>
+        </div>
       </Nav>
     </>
   );
